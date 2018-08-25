@@ -1,0 +1,1 @@
+javascript:(function(){cb=function() { create_spritz(); }; var script=document.createElement('SCRIPT');script.src='https://raw.githubusercontent.com/MikePineda/HackMty2018/blob/master/glance/spritz.js?callback=cb';script.onload=cb;document.body.appendChild(script);})();

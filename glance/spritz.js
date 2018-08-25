@@ -1,7 +1,7 @@
 // spritz.js
 // A JavaScript Speed Reader
 // rich@gun.io
-// https://github.com/Miserlou/OpenSpritz
+// https://github.com/MikePineda/HackMty2018/glance
 
 // Please don't abuse this.
 var readability_token = '172b057cd7cfccf27b60a36f16b1acde12783893';
@@ -10,19 +10,19 @@ var diffbot_token = '2efef432c72b5a923408e04353c39a7c';
 function create_spritz(){
 
      spritz_loader = function() {
-        //getURL("https://rawgithub.com/Miserlou/OpenSpritz/master/spritz.html", function(data){
+        //getURL("https://rawgithub.com/MikePineda/HackMty2018/glance/master/spritz.html", function(data){
 
-        //getURL("https://rawgithub.com/Miserlou/OpenSpritz/dev/spritz.html", function(data){
+        //getURL("https://rawgithub.com/MikePineda/HackMty2018/glance/dev/spritz.html", function(data){
 
         // This won't work in Firefox because an old bug and won't work in Chrome because of security stuff:
         //getURL("spritz.html", function(data){
 
-        //getURL("https://rawgithub.com/Miserlou/OpenSpritz/dev/spritz.html", function(data){
+        //getURL("https://rawgithub.com/MikePineda/HackMty2018/glance/dev/spritz.html", function(data){
 
         // RawGit's CDN usage:
         // "Since files are not refreshed after the first request,
         // it's best to use a specific tag or commit URL, not a branch URL."
-        getURL("https://cdn.rawgit.com/Miserlou/OpenSpritz/9e92c605032be16c986ed699d68e0acd3534e6b1/spritz.html", function(data){
+        getURL("https://cdn.rawgit.com/MikePineda/HackMty2018/master/glance/spritz.html", function(data){
             var spritzContainer = document.getElementById("spritz_container");
 
             if (!spritzContainer) {
