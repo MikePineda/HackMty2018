@@ -206,7 +206,7 @@ function spritzify(input){
         tracker.setStepSize(2);
         tracker.setEdgesDensity(0.1);
 
-        //var trackingTask = 
+        //var trackingTask =
         tracking.track('#trackvideo', tracker, { camera: true });
         //trackingTask.run();
 
@@ -315,11 +315,16 @@ function getSelectionText() {
 // Uses the Readability API to get the juicy content of the current page.
 function spritzifyURL(){
     var url = document.URL;
+    var isFromWikipedia = url.includes("wikipedia.org");
+    if(isFromWikipedia){
+      console.log(fetchWikipediaData());
+      spritzify(fetchWikipediaData());
+      return;
+    }
 
     //getURL("https://www.readability.com/api/content/v1/parser?url="+ encodeURIComponent(url) +"&token=" + readability_token +"&callback=?",
     getURL("https://api.diffbot.com/v2/article?url="+ encodeURIComponent(url) +"&token=" + diffbot_token, // +"&callback=?",
         function(data) {
-
             data = JSON.parse(data);
 
             if(data.error){
@@ -345,6 +350,7 @@ function spritzifyURL(){
             text_content = text_content.replace(/\./g, '. '); // Make sure punctuation is apprpriately spaced.
             text_content = text_content.replace(/\?/g, '? ');
             text_content = text_content.replace(/\!/g, '! ');
+
             spritzify(text_content);
         });
 
