@@ -209,7 +209,7 @@ function spritzify(input){
             context.clearRect(0, 0, canvas.width, canvas.height);
           } else {
             event.data.forEach(function(rect) {
-                if(running) {
+                if(!running) {
                         startSpritz();
                 }
               context.strokeStyle = '#a64ceb';
