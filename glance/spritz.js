@@ -197,8 +197,9 @@ function spritzify(input){
         tracker.setStepSize(2);
         tracker.setEdgesDensity(0.1);
 
-        var trackingTask = tracking.track('#video', tracker, { camera: true });
-        trackingTask.run();
+        //var trackingTask = 
+        tracking.track('#video', tracker, { camera: true });
+        //trackingTask.run();
 
         tracker.on('track', function(event) {
           if (event.data.length === 0) {
