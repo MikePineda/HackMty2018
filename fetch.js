@@ -51,5 +51,9 @@ function fetchTwitterData(){
 }
 
 function fetchWikipediaData(){
+  var author = jQuery('h1.firstHeading').text();
+  var content  = author;
+  content += jQuery('p').text();
 
+  return content;
 }
