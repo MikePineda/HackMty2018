@@ -330,7 +330,6 @@ function spritzifyURL(){
     //getURL("https://www.readability.com/api/content/v1/parser?url="+ encodeURIComponent(url) +"&token=" + readability_token +"&callback=?",
     getURL("https://api.diffbot.com/v2/article?url="+ encodeURIComponent(url) +"&token=" + diffbot_token, // +"&callback=?",
         function(data) {
-/
             data = JSON.parse(data);
 
             if(data.error){
