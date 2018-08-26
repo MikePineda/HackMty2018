@@ -357,5 +357,3 @@ function decodeEntities(s){
     temp=null;
     return str;
 }
-
-
