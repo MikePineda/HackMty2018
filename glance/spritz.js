@@ -158,7 +158,7 @@ function spritzify(input){
         var p = pivot(all_words[i]);
         console.log(all_words[i]);
         if(all_words[i].includes("img:")){
-          jQuery("#photo-preview").attr("src",all_words[i].substring(all_words[i].indexOf('img:') + 1));
+          jQuery("#photo-preview").attr("src",all_words[i].substring(all_words[i].indexOf('img:').replace('&#8226;', '.') + 4));
         }else{
           document.getElementById("spritz_result").innerHTML = p;
         }
