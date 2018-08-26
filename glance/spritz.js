@@ -329,7 +329,7 @@ function spritzifyURL(){
         postsToString += Twitterposts[i][1];
         if(Twitterposts[i][0] === "image"){
           //jQuery("#photo-preview").attr("src", Twitterposts[i][2]);
-          postsToString += " img:" + Twitterposts[i][2];
+          postsToString += " img:" + Twitterposts[i][2] + " ";
         }
       }
       spritzify(postsToString);
