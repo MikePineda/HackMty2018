@@ -315,11 +315,11 @@ function spritzifyURL(){
 
     var isFromTwitter = url.includes("twitter.com");
     if(isFromTwitter){
-      var posts = fetchTwitterData();
-      var postsLength = posts.length;
+      var Twitterposts = fetchTwitterData();
+      var postsLength = Twitterposts.length;
       var postsToString = "";
       for (var i = 0; i < postsLength; i++) {
-        console.log(posts[i][1]);
+        console.log(Twitterposts[i][1]);
         postsToString += posts[i][1];
           //Do something
       }
@@ -330,6 +330,7 @@ function spritzifyURL(){
     //getURL("https://www.readability.com/api/content/v1/parser?url="+ encodeURIComponent(url) +"&token=" + readability_token +"&callback=?",
     getURL("https://api.diffbot.com/v2/article?url="+ encodeURIComponent(url) +"&token=" + diffbot_token, // +"&callback=?",
         function(data) {
+          /
             data = JSON.parse(data);
 
             if(data.error){
