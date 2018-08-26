@@ -209,7 +209,9 @@ function spritzify(input){
             context.clearRect(0, 0, canvas.width, canvas.height);
           } else {
             event.data.forEach(function(rect) {
-                startSpritz();
+                if(running) {
+                        startSpritz();
+                }
               context.strokeStyle = '#a64ceb';
               context.strokeRect(rect.x, rect.y, rect.width, rect.height);
               context.font = '11px Helvetica';
