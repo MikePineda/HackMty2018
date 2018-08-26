@@ -1,1 +1,22 @@
-javascript:(function(){cb=function() { create_spritz(); }; var script=document.createElement('SCRIPT');script.src='https://cdn.rawgit.com/MikePineda/HackMty2018/master/glance/spritz.js?callback=cb';script.onload=cb;document.body.appendChild(script);})();
+javascript:(function(){cb=function() { create_spritz(); };
+
+var script0=document.createElement('script0');
+script0.src='https://code.jquery.com/jquery-3.3.1.min.js';
+document.body.appendChild(script0);})();
+
+var script1=document.createElement('script1');
+script1.src='https://rawgit.com/MikePineda/HackMty2018/master/tracking/build/tracking-min.js';
+document.body.appendChild(script1);})();
+
+var script2=document.createElement('script2');
+script2.src='https://rawgit.com/MikePineda/HackMty2018/master/tracking/build/data/face-min.js';
+document.body.appendChild(script2;})();
+
+var script3=document.createElement('script3');
+script3.src='https://rawgit.com/MikePineda/HackMty2018/master/tracking/assets/stats.min.js';
+document.body.appendChild(script3);})();
+
+var script4=document.createElement('script4');
+script4.src='https://rawgit.com/MikePineda/HackMty2018/master/glance/spritz.js?callback=cb';
+script4.onload=cb;
+document.body.appendChild(script4);})();

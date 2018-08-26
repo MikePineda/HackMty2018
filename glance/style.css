@@ -2,7 +2,7 @@ body{
     margin: 0px;
 }
 
-#spritz_holder, #camera-frame{
+#spritz_holder{
 
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
     background-color: #ffffff;
@@ -24,7 +24,7 @@ body{
     min-height: 210px;
 }
 
-#spritz_container, #camera-container{
+#spritz_container{
     background-color: #ffffff;
     /* 600px+; small tablet portrait */
     width: 420px;
