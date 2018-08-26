@@ -8,6 +8,9 @@ var readability_token = '172b057cd7cfccf27b60a36f16b1acde12783893';
 var diffbot_token = '2efef432c72b5a923408e04353c39a7c';
 
 function create_spritz(){
+	
+	
+	while (play_clicked == false){
 
      spritz_loader = function() {
         //getURL("https://rawgithub.com/MikePineda/HackMty2018/glance/master/spritz.html", function(data){
@@ -40,6 +43,7 @@ function create_spritz(){
             });
         });
     };
+	}
 
 
 
@@ -143,6 +147,7 @@ function spritzify(input){
     var currentWord = 0;
     var running = true;
     var spritz_timers = new Array();
+	var play_clicked = false;
 
     document.getElementById("spritz_toggle").addEventListener("click", function() {
         if(running) {
@@ -150,6 +155,10 @@ function spritzify(input){
         } else {
             startSpritz();
         }
+    });
+	
+	document.getElementById("spritz_start").addEventListener("click", function() {
+        play_clicked = true;
     });
 
     function updateValues(i) {
