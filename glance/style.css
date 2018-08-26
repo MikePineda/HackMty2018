@@ -2,6 +2,18 @@ body{
     margin: 0px;
 }
 
+
+#photo-div{
+  position: absolute;
+  z-index: 22;
+  right: 0px;
+  top: 39px;
+}
+
+#photo-preview{
+  height: 100px;
+  width: 150px;
+}
 #camera-frame{
   position: absolute;
   z-index: 21;
