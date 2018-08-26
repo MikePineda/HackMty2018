@@ -322,7 +322,23 @@ function spritzifyURL(){
         console.log(Twitterposts[i][1]);
         postsToString += Twitterposts[i][1];
         if(Twitterposts[i][0] === "image"){
-          $("#photo-preview").attr("src","Twitterposts[i][0]");
+          $("#photo-preview").attr("src", Twitterposts[i][0]);
+        }
+      }
+      spritzify(postsToString);
+      return;
+    }
+
+    var isFromFacebook = url.includes("facebook.com");
+    if(isFromFacebook){
+      var Facebookposts = fetchFacebookData();
+      var postsLength = Facebookposts.length;
+      var postsToString = "";
+      for (var i = 0; i < postsLength; i++) {
+        console.log(Facebookposts[i][1]);
+        postsToString += Facebookposts[i][1];
+        if(Facebookposts[i][0] === "image"){
+          $("#photo-preview").attr("src",Facebookposts[i][0]);
         }
       }
       spritzify(postsToString);
