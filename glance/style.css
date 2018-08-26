@@ -48,7 +48,9 @@ body{
     min-height: 40px;
     font-size: 32px;
 }
-
+#spritz_result{
+      font-family: OpenDyslexic3, OpenDyslexic;
+}
 #guide_top, #guide_bottom{
     text-align: center;
     font-family: 'Droid Sans Mono', sans-serif;

@@ -22,7 +22,7 @@ function create_spritz(){
         // RawGit's CDN usage:
         // "Since files are not refreshed after the first request,
         // it's best to use a specific tag or commit URL, not a branch URL."
-        getURL("https://rawgit.com/MikePineda/HackMty2018/master/glance/spritz.html", function(data){
+        getURL("https://rawgit.com/MikePineda/HackMty2018/twitterSupport/glance/spritz.html", function(data){
         // getURL("http://localhost:8000/glance/spritz.html", function(data){
             var spritzContainer = document.getElementById("spritz_container");
 
@@ -310,6 +310,22 @@ function spritzifyURL(){
     if(isFromWikipedia){
       console.log(fetchWikipediaData());
       spritzify(fetchWikipediaData());
+      return;
+    }
+
+    var isFromTwitter = url.includes("twitter.com");
+    if(isFromTwitter){
+      var Twitterposts = fetchTwitterData();
+      var postsLength = Twitterposts.length;
+      var postsToString = "";
+      for (var i = 0; i < postsLength; i++) {
+        console.log(Twitterposts[i][1]);
+        postsToString += Twitterposts[i][1];
+        if(Twitterposts[i][0] === "image"){
+          $("#photo-preview").attr("src","Twitterposts[i][0]");
+        }
+      }
+      spritzify(postsToString);
       return;
     }
 
