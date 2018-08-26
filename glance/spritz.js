@@ -188,10 +188,10 @@ function spritzify(input){
         running = false;
     }
 
-    startSpritz();
+
     window.onload = function() {
-        var video = document.getElementById('video');
-        var canvas = document.getElementById('canvas');
+        var video = document.getElementById('trackvideo');
+        var canvas = document.getElementById('trackcanvas');
         var context = canvas.getContext('2d');
         var tracker = new tracking.ObjectTracker('face');
         tracker.setInitialScale(4);
@@ -213,6 +213,8 @@ function spritzify(input){
           });
         });
       };
+
+      startSpritz();
 }
 
 // Find the red-character of the current word.
