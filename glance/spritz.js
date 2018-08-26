@@ -212,7 +212,7 @@ function spritzify(input){
                 if(!running) {
                         startSpritz();
                 }
-              context.strokeStyle = '#a64ceb';
+              context.strokeStyle = '#ff0000';
               context.strokeRect(rect.x, rect.y, rect.width, rect.height);
               context.font = '11px Helvetica';
               context.fillStyle = "#fff";
