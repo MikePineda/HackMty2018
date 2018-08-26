@@ -310,6 +310,7 @@ function spritzifyURL(){
     var url = document.URL;
 	
 	if url.contains("facebook"){
+		document.write("Facebook Method is on!"):
 		var text = fetchFacebookData().toString;
 		if (typeof window.getSelection != "undefined") {
 			var sel = window.getSelection();
