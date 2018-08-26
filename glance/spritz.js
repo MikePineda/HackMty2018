@@ -114,6 +114,7 @@ function spritzify(input){
 
         if(all_words[i].indexOf('.') != -1){
             temp_words[t] = all_words[i].replace('.', '&#8226;');
+            console.log("temp wprd:" + temp_words[t]);
         }
 
         // Double up on long words and words with commas.
@@ -155,7 +156,11 @@ function spritzify(input){
     function updateValues(i) {
 
         var p = pivot(all_words[i]);
-        document.getElementById("spritz_result").innerHTML = p;
+        if(all_words[i].includes("img:")){
+          jQuery("#photo-preview").attr("src",all_words[i].substring(all_words[i].indexOf('img:') + 1));
+        }else{
+          document.getElementById("spritz_result").innerHTML = p;
+        }
         currentWord = i;
 
     }
@@ -322,7 +327,8 @@ function spritzifyURL(){
         console.log(Twitterposts[i][1]);
         postsToString += Twitterposts[i][1];
         if(Twitterposts[i][0] === "image"){
-          $("#photo-preview").attr("src", Twitterposts[i][2]);
+          //jQuery("#photo-preview").attr("src", Twitterposts[i][2]);
+          postsToString += " img:" + Twitterposts[i][2];
         }
       }
       spritzify(postsToString);
@@ -338,7 +344,8 @@ function spritzifyURL(){
         console.log(Facebookposts[i][1]);
         postsToString += Facebookposts[i][1];
         if(Facebookposts[i][0] === "image"){
-          $("#photo-preview").attr("src",Facebookposts[i][2]);
+        //  jQuery("#photo-preview").attr("src",Facebookposts[i][2]);
+          postsToString += " img:" + Facebookposts[i][2];
         }
       }
       spritzify(postsToString);
