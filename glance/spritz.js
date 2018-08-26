@@ -321,6 +321,9 @@ function spritzifyURL(){
       for (var i = 0; i < postsLength; i++) {
         console.log(Twitterposts[i][1]);
         postsToString += Twitterposts[i][1];
+        if(Twitterposts[i][0] === "image"){
+          $("#photo-preview").attr("src","Twitterposts[i][0]");
+        }
       }
       spritzify(postsToString);
       return;
