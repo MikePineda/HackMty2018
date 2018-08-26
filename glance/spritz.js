@@ -156,6 +156,7 @@ function spritzify(input){
     function updateValues(i) {
 
         var p = pivot(all_words[i]);
+        console.log(all_words[i]);
         if(all_words[i].includes("img:")){
           jQuery("#photo-preview").attr("src",all_words[i].substring(all_words[i].indexOf('img:') + 1));
         }else{
