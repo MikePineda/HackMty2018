@@ -346,7 +346,7 @@ function spritzifyURL(){
         postsToString += Facebookposts[i][1];
         if(Facebookposts[i][0] === "image"){
         //  jQuery("#photo-preview").attr("src",Facebookposts[i][2]);
-          postsToString += " img:" + Facebookposts[i][2];
+          postsToString += " img:" + Facebookposts[i][2]  + " ";
         }
       }
       spritzify(postsToString);
