@@ -189,7 +189,7 @@ function spritzify(input){
     }
 
 
-    window.onload = function() {
+    function startTracking() {
         var video = document.getElementById('trackvideo');
         var canvas = document.getElementById('trackcanvas');
         var context = canvas.getContext('2d');
@@ -214,6 +214,7 @@ function spritzify(input){
         });
       };
 
+      startTracking();
       startSpritz();
 }
 

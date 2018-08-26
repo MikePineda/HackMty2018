@@ -2,7 +2,7 @@ body{
     margin: 0px;
 }
 
-#spritz_holder{
+#spritz_holder, #camera-frame{
 
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
     background-color: #ffffff;
@@ -24,7 +24,7 @@ body{
     min-height: 210px;
 }
 
-#spritz_container{
+#spritz_container, #camera-container{
     background-color: #ffffff;
     /* 600px+; small tablet portrait */
     width: 420px;
@@ -54,7 +54,7 @@ body{
 #notch{
     text-align: center;
     font-family: 'Droid Sans Mono', sans-serif;
-    color: #dddddd;    
+    color: #dddddd;
     /* 600px+; small tablet portrait */
     margin-top: 9px;
     padding-top: 12px;
@@ -148,5 +148,3 @@ video, canvas {
     }
 
 }
-
-
